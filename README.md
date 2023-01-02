@@ -23,7 +23,7 @@ apt update
 apt upgrade
 ```
 
-### install aptitude (optional)
+### (optional) install aptitude
 I personally like aptitude more than apt. This is how to install it:
 ```bash
 apt install aptitude
@@ -31,7 +31,7 @@ aptitude update
 aptitude safe-upgrade
 ```
 
-### install additional tools (optional)
+### (optional) install additional tools
 ```bash
 apt install multitail iptraf-ng
 ```
