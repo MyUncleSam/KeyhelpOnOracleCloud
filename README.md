@@ -57,7 +57,7 @@ The log file I think should be accessable using:
 
 After that you can simply re-run the installation script. It should be inside your `/root/` folder. But you can also simply rerun the step `install keyhelp` from above.
 
-# install webmin (optional)
+# (optional) install webmin
 Some stuff was translated from german to english, so some names could be a little bit different.
 
 ## default installation
@@ -95,18 +95,18 @@ If it is not working:
 - check if the files you specified are really working, you can simply do that by copying the path and doing a cat, example: `cat /etc/ssl/keyhelp/letsencrypt/keyhelpuser/webmin.domain.tld/private.pem`
 - check the journal: `journalctl -u webmin.service` (you can close it by pressing `q` or `:` and then enter a `q`)
 
-## change port (optional but recommended)
+## (optional but recommended) change port
 Lets say we want to change it to port 23423
 1. login to keyhelp and open port 23423 TCP
 2. login to webmin: "Webmin" -> "Webmin-Configuration" and choose "Ports and Address"
     - in the list at the top change from 10000 to 23423
     - i also recommend to NOT watch for broadcasts
 
-## language (optional)
+## (optional) language
 1. go to "Webmin" -> "Webmin-Configuration" and choose "languages and display settings"
 2. you may change the default language but you should enable the browser language detection, after you changed this a simple reload should show you your prefered language
 
-# enable IPv6 (optional)
+# (optional) enable IPv6
 Based on:
 https://www.51sec.org/2021/09/20/enable-ipv6-on-oracle-cloud-infrastructure/
 
