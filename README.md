@@ -9,9 +9,9 @@ su -
 ```bash
 unminimize
 ```
-You need to unminimize which takes about 1gb more space. If you do not a lot of things are missing which are needed for keyhelp (from software, features till log - yes by default there is no /var/log ...). Installing with the oracle minimized system keyhelp is not going to work. Even if you unminimize after the installation things are not working as expected.
+You need to unminimize which takes about 1gb more space. If you do not unminimize it, a lot of things are missing which are needed for keyhelp (from software, features till log - yes by default there is no /var/log ...). Installing with the oracle minimized system, keyhelp is not going to work. Even if you unminimize after the installation things are not working as expected.
 
-## install some stuff (optional)
+## install some stuff (I am using aptitude, feel free to use apt)
 ```bash
 apt update
 apt install aptitude
