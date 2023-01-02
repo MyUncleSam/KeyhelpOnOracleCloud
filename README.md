@@ -1,5 +1,5 @@
 # General
-This how to shows the installation of a keyhelp environment on an arm64 based server/system. In this special case it is for the oracle cloud free arm64 server.
+This how to shows the installation of a keyhelp environment on an arm64 based server/system. In this special case it is for the oracle cloud free arm64 server. A description how to create a free tier virtual machine can be found here: https://cohost.org/awakecoding/post/384627-free-arm-server-with
 
 As my system is in german I translated some names into english for you. So if a name is not matching, it should at least be a little bit like it :-).
 
