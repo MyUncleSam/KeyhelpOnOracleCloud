@@ -1,3 +1,8 @@
+# General
+This how to shows the installation of a keyhelp environment on an arm64 based server/system. In this special case it is for the oracle cloud free arm64 server.
+
+As my system is in german I translated some names into english for you. So if a name is not matching, it should at least be a little bit like it :-).
+
 # prepare your server for keyhelp
 ## create root password and login to root
 ```bash
