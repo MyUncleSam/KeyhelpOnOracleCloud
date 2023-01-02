@@ -16,7 +16,7 @@ unminimize
 ```
 You need to unminimize which takes about 1gb more space. If you do not unminimize it, a lot of things are missing which are needed for keyhelp (from software, features till log - yes by default there is no /var/log ...). Installing with the oracle minimized system, keyhelp is not going to work. Even if you unminimize after the installation things are not working as expected.
 
-## install some stuff
+## update server (and some optional installations)
 ### update everything
 ```bash
 apt update
