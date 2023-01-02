@@ -36,7 +36,7 @@ apt install multitail iptraf-ng
 shutdown -r now
 ```
 
-## install keyhelp (see https://www.keyhelp.de/)
+## install keyhelp (see [https://www.keyhelp.de/](https://www.keyhelp.de/en/#install))
 ```bash
 su -
 cd
