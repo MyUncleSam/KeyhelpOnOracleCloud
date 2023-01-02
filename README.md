@@ -29,11 +29,18 @@ shutdown -r now
 ## install keyhelp (see https://www.keyhelp.de/)
 ```bash
 su -
+cd
 wget https://install.keyhelp.de/get_keyhelp.php -O install_keyhelp.sh ; bash install_keyhelp.sh ;
 ```
 
 ## check installation
-If there is an error/red flag during the installation you need to check the installation log. In most cases
+Do this before you add or change anything in keyhelp. The main reason is that most errors can only be fixed by a reinstall which is clearing all keyhelp is knowing (but keeping stuff you already added). So if you added your domain and then reinstall keyhelp, keyhelp is complaining that it already exists. Then you need to remove it on your own to be able to add and manage it again with keyhelp (same for other parts like users).
+
+The log file I think should be accessable using:
+    - shell: `/var/log/keyhelp/`
+    - keyhelp: simply login and it should display that there were errors, you should be able to view the log in the ui
+
+After that you can simply re-run the installation script. It should be inside your `/root/` folder. But you can also simply rerun the step `install keyhelp` from above.
 
 # install webmin (optional)
 Some stuff was translated from german to english, so some names could be a little bit different.
