@@ -9,6 +9,7 @@ Oracle cloud deactivated the smtp sending by default. I think this is a security
 To be able to have a mailserver running, you need to follow the steps below. But as they are not really easy and need a lot of contact with the customer support I recommend to spend some bucks on a hosted mailserver (or self hosting it). I personally can recommend Mailcow. It can be self hosted (not in Oracle free tier) or you can pay for hosting: https://mailcow.email/
 
 ## reserver ip address
+Thanks to https://www.youtube.com/watch?v=s3M5PqGZ_2A
 1. go to "Compute" -> "Instances" and open the details of the server
 2. on the left choose "Attached VNICs" and open the details of your VNIC
 3. now choose on the left "IPv4 Address", this shows you now your IPv4 Address
