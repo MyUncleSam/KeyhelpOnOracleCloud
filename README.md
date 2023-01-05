@@ -3,6 +3,47 @@ This how to shows the installation of a keyhelp environment on an arm64 based se
 
 As my system is in german I translated some names into english for you. So if a name is not matching, it should at least be a little bit like it :-).
 
+# Mailserver
+Oracle cloud deactivated the smtp sending by default. I think this is a security feature or Oracle to prevent spamming and phishing with their ip addresses. So in general it's good, but if you want to use the mailserver it is bad. (source: https://docs.oracle.com/en-us/iaas/Content/Network/Troubleshoot/vcn_troubleshooting.htm)
+
+To be able to have a mailserver running, you need to follow the steps below. But as they are not really easy and need a lot of contact with the customer support I recommend to spend some bucks on a hosted mailserver (or self hosting it). I personally can recommend Mailcow. It can be self hosted (not in Oracle free tier) or you can pay for hosting: https://mailcow.email/
+
+## reserver ip address
+1. go to "Compute" -> "Instances" and open the details of the server
+2. on the left choose "Attached VNICs" and open the details of your VNIC
+3. now choose on the left "IPv4 Address", this shows you now your IPv4 Address
+4. klick on the "..." on the right of the IPv4 Addresses entriy
+5. Choose "No public IP"
+6. go to "Networking" -> "IP Management" -> "Reserved Public IPs" (open it in a new tab)
+7. click on "Reseve Public IP Address"
+    - Reserved Public IP Address Name: <choose anything you like>
+    - Create in Compartment: <the one your servers uses, in most cases you only have one>
+    - IP Address Source in ...: <leave empty>
+    - click "Reserve Public IP Address"
+8. go back to the tab of your servers IPv4 Addresses (or follow step 1-4 again)
+9. Now choose:
+    - Public IP Type: Reserved public IP
+    - Check "Select Existing Reserved IP Address"
+    - Check if the new IP Address is selected below
+
+Now your server has a new public IP address which is not changing.
+
+## reverse ip lookup (PTR)
+To be able to be allowed to send mails, you need to create a MX entry in the DNS. This looks up your domain like "srv.domain.tld" to your IP address like "10.11.12.13". But it also needs to lookup the other way around. If you check your public IP Address "10.11.12.13", it needs to lookup to "srv.domain.tld". If not a lot or all mailservers are not accepting mails from you.
+
+But you have no option to enable or set it on your own. For this you need:
+1. login to your cloud account
+2. On the top right click the question icon and choose "Request a limit increase"
+3. Nicely ask the support staff to change the reverse lookup to the hostname you need
+
+## enable smtp sending
+As written in the top part, smtp sending is disabled by default. So if you try to send to someone, Oracle is blocking this connection. This results in my case in connection timeouts.
+
+The only thing you can do is:
+1. login to your cloud account
+2. On the top right click the question icon and choose "Request a limit increase"
+3. Nicely ask the support staff to enable smtp sending
+
 # prepare your server for keyhelp
 ## create root password and login to root
 ```bash
