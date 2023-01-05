@@ -4,6 +4,8 @@ This how to shows the installation of a keyhelp environment on an arm64 based se
 As my system is in german I translated some names into english for you. So if a name is not matching, it should at least be a little bit like it :-).
 
 # Mailserver
+If your tenancies was made after June 23, 2021, this is affecting you!
+
 Oracle cloud deactivated the smtp sending by default. I think this is a security feature or Oracle to prevent spamming and phishing with their ip addresses. So in general it's good, but if you want to use the mailserver it is bad. (source: https://docs.oracle.com/en-us/iaas/Content/Network/Troubleshoot/vcn_troubleshooting.htm)
 
 To be able to have a mailserver running, you need to follow the steps below. But as they are not really easy and need a lot of contact with the customer support I recommend to spend some bucks on a hosted mailserver (or self hosting it). I personally can recommend Mailcow. It can be self hosted (not in Oracle free tier) or you can pay for hosting: https://mailcow.email/
