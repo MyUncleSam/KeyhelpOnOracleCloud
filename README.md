@@ -63,7 +63,7 @@ Some stuff was translated from german to english, so some names could be a littl
 ## default installation
 1. go to https://webmin.com/download.html and copy the Debian *.deb file download link
 2. be root: `su -`
-3. install requirements: `apt install install libauthen-pam-perl libio-pty-perl`
+3. install requirements: `apt install libauthen-pam-perl libio-pty-perl`
 4. download the file: `wget -O webmin.deb https://prdownloads.sourceforge.net/webadmin/webmin_2.010_all.deb` (replace with the copied download link)
 5. install webmin: `dpkg -i webmin.deb`
 6. if there are missing dependencies install them as in step 3
