@@ -36,6 +36,8 @@ Thanks to youtuber "inGuide": https://www.youtube.com/watch?v=s3M5PqGZ_2A
 Now your server has a new public IP address which is not changing.
 
 ## reverse ip lookup (PTR)
+!!! UNTESTED !!!
+
 To be able to be allowed to send mails, you need to create a MX entry in the DNS. This looks up your domain like "srv.domain.tld" to your IP address like "10.11.12.13". But it also needs to lookup the other way around. If you check your public IP Address "10.11.12.13", it needs to lookup to "srv.domain.tld". If not a lot or all mailservers are not accepting mails from you.
 
 But you have no option to enable or set it on your own. For this you need:
@@ -44,6 +46,8 @@ But you have no option to enable or set it on your own. For this you need:
 3. Nicely ask the support staff to change the reverse lookup to the hostname you need
 
 ## enable smtp sending
+!!! UNTESTED !!!
+
 As written in the top part, smtp sending is disabled by default. So if you try to send to someone, Oracle is blocking this connection. This results in my case in connection timeouts.
 
 The only thing you can do is:
