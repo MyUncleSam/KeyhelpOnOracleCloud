@@ -1,4 +1,6 @@
 # General
+WIP - Work In Progress
+
 This how to shows the installation of a keyhelp environment on an arm64 based server/system. In this special case it is for the oracle cloud free arm64 server. A description how to create a free tier virtual machine can be found here: https://cohost.org/awakecoding/post/384627-free-arm-server-with
 
 As my system is in german I translated some names into english for you. So if a name is not matching, it should at least be a little bit like it :-).
@@ -14,7 +16,7 @@ To be able to have a mailserver running, you need to follow the steps below. But
 
 (At the moment I am trying to achieve all of those steps. As soon as I know if they are possible in the free tier I add some note here.)
 
-## reserver ip address
+## reserved ip address
 Thanks to youtuber "inGuide": https://www.youtube.com/watch?v=s3M5PqGZ_2A
 1. go to "Compute" -> "Instances" and open the details of the server
 2. on the left choose "Attached VNICs" and open the details of your VNIC
